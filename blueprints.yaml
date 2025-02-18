@@ -1,0 +1,33 @@
+name: Upload Cleanup
+slug: upload-cleanup
+type: plugin
+version: 1.0.0
+description: Prevents file uploads from being saved permanently if needed
+icon: plug
+author:
+  name: Sebastian Laube
+  email: hello@sebastianlaube.de
+homepage: https://github.com/bitstarr/grav-plugin-upload-cleanup
+demo: http://demo.yoursite.com
+keywords: grav, plugin, forms
+bugs: https://github.com/bitstarr/grav-plugin-upload-cleanup/issues
+docs: https://github.com/bitstarr/grav-plugin-upload-cleanup/blob/main/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+  - { name: form, version: '>=7.4.0' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
