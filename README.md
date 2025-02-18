@@ -62,6 +62,9 @@ form:
 
 The plugin basically deletes all files inside the `tmp/uploads` when it is called to process.
 
+> [!WARNING]
+> If the email transmission or any other step in the process list fails, the cleanup will run and delete the content of the tmp/uploads folder in any case.
+
 ## Installation
 
 Installing the News plugin can be done in multiple ways: The manual method lets you do so via a zip file, installation via dependecies and the admin method lets you do so via the Admin Plugin.
